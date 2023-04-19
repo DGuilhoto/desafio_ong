@@ -5,7 +5,14 @@ const Ong = require('../models/Ong')
 ong.route('/')
 .get(async ( req, res) =>{
     
+    try{
+    const ongs = await Ong.findAll();
+    res.status(200).json(ongs);
+} catch (err){
+    res.status(500).json(err);
+}
 })
+
 .post(async ( req, res) =>{
 
     const {nome, tipo, cnpj, desc, data_criacao} = req.body
