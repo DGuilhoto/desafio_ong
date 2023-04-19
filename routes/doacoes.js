@@ -1,6 +1,6 @@
 const express = require('express');
 const doacoes = express.Router();
-
+const Doacao = require('../models/Doacao')
 doacoes.route('/')
 .get(async ( req, res) =>{
     res.json({message: "Get funcionando"})

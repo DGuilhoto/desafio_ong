@@ -13,4 +13,4 @@ app.use('/ong/doacoes', doacoes);
 
 
 //define a rota para o servidor
-app.listen(process.env.DB_PORT);
+app.listen(3000);

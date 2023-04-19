@@ -1,14 +1,15 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../db/db')
+
 class Doacao extends Model {}
 
 Doacao.init({
     doador: {
-        type: DataTypes.STRING,
+        type: DataTypes.FLOAT,
         allowNull: false
     },
     valor: {
-        type: DataTypes.NUMBER,
+        type: DataTypes.STRING,
         allowNull: false
     }
 }, 
