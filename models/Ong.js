@@ -1,5 +1,6 @@
 const {Model, DataTypes} = require('sequelize');
-cont Doacoes = require('./Doacoes')
+const Doacao = require('./Doacao')
+const sequelize = require('../db/db')
 
 class Ong extends Model {}
 
@@ -28,6 +29,6 @@ cnpj: {
     tableName: 'ongs'
 });
 
-Ong.hasMany(Doacoes);
-Doacoes.belongsTo(Ong);
+Ong.hasMany(Doacao);
+Doacao.belongsTo(Ong);
 module.exports = Ong;

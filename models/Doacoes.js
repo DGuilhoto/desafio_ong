@@ -1,20 +1,21 @@
-const {Model, DataTypes} = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../db/db')
+class Doacao extends Model {}
 
-class Doacoes extends Model {}
-
-Ong.init({
-doador:{
-    type: DataTypes.STRING,
-    allowNull: false
-},
-valor: {
-    type: DataTypes.STRING,
-    allowNull: false
-}
-
-}, {sequelize,
-    modelName: 'doacoes',
+Doacao.init({
+    doador: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    valor: {
+        type: DataTypes.NUMBER,
+        allowNull: false
+    }
+}, 
+{
+    sequelize, 
+    modelName:'doacao', 
     tableName: 'doacoes'
 });
 
-module.exports = Doacoes
+module.exports = Doacao;
