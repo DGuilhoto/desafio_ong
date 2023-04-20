@@ -5,11 +5,11 @@ class Doacao extends Model {}
 
 Doacao.init({
     doador: {
-        type: DataTypes.FLOAT,
+        type: DataTypes.STRING,
         allowNull: false
     },
     valor: {
-        type: DataTypes.STRING,
+        type: DataTypes.FLOAT,
         allowNull: false
     }
 }, 

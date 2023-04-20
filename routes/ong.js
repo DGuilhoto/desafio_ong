@@ -37,7 +37,7 @@ ong.route('/')
     }
     const ongEncontrada = await Ong.findOne({where: {cnpj}})
     if(!ongEncontrada){
-        return res.status(400).json({message: "Ong não encontrada"})
+        return res.status(404).json({message: "Ong não encontrada"})
     }
 
     try{
@@ -56,7 +56,7 @@ ong.route('/')
 
     const ongEncontrada = Ong.findByPk(id);
     if(!ongEncontrada){
-        return res.status(400).json({message: "Ong não encontrada"})
+        return res.status(404).json({message: "Ong não encontrada"})
     }
     try{ 
         const response = await Ong.destroy(ongEncontrada);
