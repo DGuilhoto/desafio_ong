@@ -17,6 +17,10 @@ data_criacao:{
     type: DataTypes.DATE,
     allowNull: false
 },
+desc:{
+    type: DataTypes.STRING,
+    allowNull: false
+},
 cnpj: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -26,7 +30,8 @@ cnpj: {
 {
     sequelize,
     modelName: 'ong',
-    tableName: 'ongs'
+    tableName: 'ongs',
+    paranoid: true
 });
 
 Ong.hasMany(Doacao);
